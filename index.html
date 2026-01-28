@@ -179,7 +179,10 @@
                 document.getElementsByTagName('head')[0].appendChild(meta);
             }
 
-            document.querySelector('#canvas-container').requestFullscreen();
+            var gameContainer = document.querySelector('#gameContainer');
+            if (gameContainer) {
+                // gameContainer.requestFullscreen(); // Usually fails without user gesture, but fixing the selector anyway
+            }
         </script>
     </div>
 
